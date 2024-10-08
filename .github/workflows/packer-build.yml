@@ -28,8 +28,7 @@ jobs:
           --password ${{ secrets.AZURE_CLIENT_SECRET }} \
           --tenant ${{ secrets.AZURE_TENANT_ID }}
 
-
-      - name: Build image using Packer
+      - name: Build image using Packer 2
         run: |
           echo ${{ secrets.AZURE_CLIENT_ID }}
           packer build \
