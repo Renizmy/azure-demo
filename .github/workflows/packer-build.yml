@@ -19,6 +19,13 @@ jobs:
           sudo apt-get install -y packer
           sudo packer plugins install github.com/hashicorp/azure
 
+      - name: Login to Azure
+        run: |
+          az login --service-principal \
+          --username ${{ secrets.AZURE_CLIENT_ID }} \
+          --password ${{ secrets.AZURE_CLIENT_SECRET }} \
+          --tenant ${{ secrets.AZURE_TENANT_ID }}
+
       - name: Build image using Packer
         run: |
           echo ${{ secrets.AZURE_CLIENT_ID }}
