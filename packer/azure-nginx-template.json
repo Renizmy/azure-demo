@@ -1,0 +1,29 @@
+{
+  "builders": [
+    {
+      "type": "azure-arm",
+      "client_id": "{{user `client_id`}}",
+      "client_secret": "{{user `client_secret`}}",
+      "tenant_id": "{{user `tenant_id`}}",
+      "subscription_id": "{{user `subscription_id`}}",
+      "managed_image_resource_group_name": "{{user `resource_group`}}",
+      "managed_image_name": "nginx-image",
+      "managed_image_storage_account_type": "Standard_LRS",
+      "location": "East US",
+      "vm_size": "Standard_DS1_v2",
+      "os_type": "Linux",
+      "image_publisher": "Canonical",
+      "image_offer": "UbuntuServer",
+      "image_sku": "18.04-LTS"
+    }
+  ],
+  "provisioners": [
+    {
+      "inline": [
+        "sudo apt-get update",
+        "sudo apt-get install -y nginx"
+      ],
+      "type": "shell"
+    }
+  ]
+}
