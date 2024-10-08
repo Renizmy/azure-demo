@@ -7,6 +7,7 @@
       "tenant_id": "{{user `tenant_id`}}",
       "subscription_id": "{{user `subscription_id`}}",
       "build_resource_group_name": "{{user `managed_image_resource_group_name`}}",
+      "shared_image_gallery_destination" : "{{user `shared_image_gallery_destination`}}",
       "managed_image_name": "nginx-image",
       "managed_image_storage_account_type": "Standard_LRS",
       "location": "East US",
