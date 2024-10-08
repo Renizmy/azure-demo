@@ -19,6 +19,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y packer
           sudo packer plugins install github.com/hashicorp/azure          
+          
 
       - name: Login to Azure
         run: |
