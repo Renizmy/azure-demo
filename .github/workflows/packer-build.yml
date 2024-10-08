@@ -36,5 +36,5 @@ jobs:
             -var 'client_secret=${{ secrets.AZURE_CLIENT_SECRET }}' \
             -var 'subscription_id=${{ secrets.AZURE_SUBSCRIPTION_ID }}' \
             -var 'tenant_id=${{ secrets.AZURE_TENANT_ID }}' \
-            -var 'resource_group=1-feb49ddf-playground-sandbox' \
+            -var 'build_resource_group_name=1-feb49ddf-playground-sandbox' \
             ./packer/azure-nginx-template.json
