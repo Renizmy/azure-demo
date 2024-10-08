@@ -17,6 +17,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y packer
+          sudo packer plugins install github.com/hashicorp/azure
 
       - name: Build image using Packer
         run: |
