@@ -8,6 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: dev
 
     steps:
       - name: Checkout repository
@@ -17,8 +18,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y packer
-          sudo packer plugins install github.com/hashicorp/azure
-          
+          sudo packer plugins install github.com/hashicorp/azure          
 
       - name: Login to Azure
         run: |
