@@ -6,7 +6,7 @@
       "client_secret": "{{user `client_secret`}}",
       "tenant_id": "{{user `tenant_id`}}",
       "subscription_id": "{{user `subscription_id`}}",
-      "managed_image_resource_group_name": "{{user `managed_image_resource_group_name`}}",
+      "build_resource_group_name": "{{user `managed_image_resource_group_name`}}",
       "managed_image_name": "nginx-image",
       "managed_image_storage_account_type": "Standard_LRS",
       "location": "East US",
