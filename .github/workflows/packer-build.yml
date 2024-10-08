@@ -3,7 +3,7 @@ name: Build Azure VM Image with Packer
 on:
   push:
     branches:
-      - main
+      - develop
 
 jobs:
   build:
