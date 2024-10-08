@@ -39,3 +39,4 @@ jobs:
             -var 'build_resource_group_name=1-feb49ddf-playground-sandbox' \
             -var 'shared_image_gallery_destination=demo' \
             ./packer/azure-nginx-template.json
+          
